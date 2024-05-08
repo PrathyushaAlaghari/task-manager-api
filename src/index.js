@@ -29,6 +29,6 @@ app.post('/upload', upload.single('upload'), (req, res) => {
 app.use(userRouter)
 app.use(taskRouter)
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log('Server is running on port: ', port)
 })
